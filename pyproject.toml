@@ -1,18 +1,21 @@
 [tool.poetry]
-name = "usando-ollama-langchain"
+name = "streamlit-llama-app"
 version = "0.1.0"
-description = ""
-authors = ["paribe <paribe@gmail.com>"]
-readme = "README.md"
+description = "Aplicação Streamlit com Llama 3"
+authors = ["seu-nome <seu-email@example.com>"]
+packages = [
+    { include = "streamlit_llama_app", from = "src" }
+]
 
 [tool.poetry.dependencies]
 python = "^3.12"
+streamlit = "^1.31.0"
 langchain = "*"
-langchain-community = "^0.3.0"  # Versão compatível
+langchain-community = "^0.3.0"
 langchain-ollama = "^0.2.3"
-
-
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+package-mode = false
